@@ -1,0 +1,38 @@
+FUNCTION dot_product(VAR v1,v2 :  ARRAY_OF FLOAT): INTEGER
+
+VAR
+    a,i : INTEGER;
+    ps : FLOAT:;
+
+BEGIN
+    ps:= 0;
+    FOR i FROM 0 TO a-1 STEP 1  DO
+        ps:= ps + v1[i]*v2[i];
+    END_FOR
+    RETURN ps;    
+END
+
+ALGORITHM Dot product
+
+VAR
+    i,j,sz: INTEGER;
+    v1,v2 : ARRAY_OF FLOAT [50] ;
+
+BEGIN
+    Write("donner :"sz)
+
+    FOR i FROM 0 TO sz-1 STEP 1  DO
+
+     Read (v1[i])
+     Read (v2[i])
+
+    END_FOR
+
+    
+    IF (dot_product(v1,v2)=0) THEN
+
+     Write(v1 + " and "v2 + "sont orthogonaux")
+
+    END_IF 
+
+END
